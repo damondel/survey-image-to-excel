@@ -1,0 +1,56 @@
+{
+  "description": "Example survey analyzer - extracts survey responses",
+  "baseAnalyzerId": "prebuilt-document",
+  "models": {
+    "completion": "gpt-4.1",
+    "embedding": "text-embedding-ada-002"
+  },
+  "config": {
+    "returnDetails": true,
+    "enableFormula": false,
+    "disableContentFiltering": false,
+    "estimateFieldSourceAndConfidence": true,
+    "tableFormat": "html"
+  },
+  "fieldSchema": {
+    "fields": {
+      "respondent_name": {
+        "type": "string",
+        "method": "extract",
+        "description": "Respondent's full name from the Name field"
+      },
+      "respondent_email": {
+        "type": "string",
+        "method": "extract",
+        "description": "Respondent's email address"
+      },
+      "q1_option1": {
+        "type": "selectionMark",
+        "description": "First checkbox option in Q1"
+      },
+      "q1_option2": {
+        "type": "selectionMark",
+        "description": "Second checkbox option in Q1"
+      },
+      "q1_option3": {
+        "type": "selectionMark",
+        "description": "Third checkbox option in Q1"
+      },
+      "q1_other_text": {
+        "type": "string",
+        "method": "extract",
+        "description": "Handwritten text for 'Other' option in Q1"
+      },
+      "q2_response": {
+        "type": "string",
+        "method": "extract",
+        "description": "Free-text response for Q2"
+      },
+      "q3_rating": {
+        "type": "string",
+        "method": "generate",
+        "description": "Rating selection (1-5 scale or similar)"
+      }
+    }
+  }
+}

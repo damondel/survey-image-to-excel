@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables (contains API keys)
+.env
+
+# Survey Data - DO NOT COMMIT
+surveys_event1/
+surveys_event2/
+surveys_event3/
+surveys_sample/*.jpg
+surveys_sample/*.jpeg
+surveys_sample/*.png
+surveys_sample/*.pdf
+*.xlsx
+!example_output.xlsx
+
+# Output files
+output/
+results/
+*.log
