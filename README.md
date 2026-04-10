@@ -56,7 +56,7 @@ AZURE_OPENAI_API_VERSION=2024-05-01-preview
 
 Create a Content Understanding analyzer for your survey:
 
-1. Go to Azure AI Foundry portal
+1. Go to Microsoft Foundry portal
 2. Create new Content Understanding analyzer
 3. Define schema (see `survey_schemas/` for examples)
 4. Test with sample survey images
